@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 3% 6%;
+  text-align: center;
+  font-family: "Jost";
+  background-color: #1f1f1f;
+  color: #bdbddd;
+
+  .animalsGallery {
+    h1 {
+      font-weight: 600;
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      color: #646d8f;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      .animalItem {
+        padding-top: 1rem;
+        background-color: #1d2132;
+        border: 1px solid #bdbddd;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          span {
+            font-size: 5rem;
+          }
+          h3 {
+            font-size: 2rem;
+          }
+          h4 {
+            font-size: 1.5rem;
+          }
+        }
+        ul {
+          text-align: left;
+          margin-top: 1rem;
+          padding: 2rem 4rem;
+          background-color: #2a2f4c;
+          border-bottom-left-radius: 1rem;
+          border-bottom-right-radius: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+      .animalItem:hover {
+        box-shadow: 0 0 1rem #646d8f;
+        transform: scale(1.02) translate(0, -2%);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  #root {
+    .animalsGallery article {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  #root {
+    .animalsGallery article {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #root {
+    .animalsGallery article {
+      grid-template-columns: 1fr;
+    }
+  }
+}
